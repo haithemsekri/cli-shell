@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<cli>
+    <method name="cli_ping"></method>
+    <class name="modem">
+        <method name="status"> </method>
+        <class name="hw">
+            <method name="status"> </method>
+            <method name="power_on"> </method>
+            <method name="power_off"> </method>
+            <method name="reset"> </method>
+        </class>
+        <class name="com">
+            <method name="write_tx_data">
+                <argument name="sPort" type="s"/>
+                <argument name="sData" type="s"/>
+            </method>
+            <method name="read_rx_data"> </method>
+            <method name="enable_async_rx_print"> </method>
+            <method name="disable_async_rx_print"> </method>
+        </class>
+        <class name="sms">
+            <method name="status"> </method>
+            <method name="list"> </method>
+            <method name="delete">
+                <argument name="uId" type="u"/>
+            </method>
+            <method name="read">
+                <argument name="uId" type="u"/>
+            </method>
+            <method name="send">
+                <argument name="sNumber" type="s"/>
+                <argument name="sData"   type="s"/>
+            </method>
+        </class>
+        <class name="call">
+            <method name="status"> </method>
+            <method name="dial">
+                <argument name="sNumber" type="s"/>
+            </method>
+            <method name="hang"> </method>
+        </class>
+    </class>
+    <class name="log">
+            <method name="status"> </method>
+            <method name="set_verbosity">
+                <argument name="sVerbosity" type="s"/>
+            </method>
+            <method name="list_loggers"> </method>
+    </class>
+</cli>
+
